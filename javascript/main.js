@@ -24,6 +24,7 @@ const checkboxMenor = document.getElementById('menor')
 const checkboxMayor = document.getElementById('mayor')
 const filtros = document.querySelector('.filtros__category')
 const categorias = document.querySelector('.filtros__checkbox')
+const input = document.querySelector(".input-buscar")
 let carrito = []
 let productosFiltrados = stockProductos;
 
@@ -227,13 +228,12 @@ function sleep(milliseconds) {
 const API_URL = 'https://api.mercadolibre.com/';
 const endpointProductos = 'sites/MLU/search/';
 let productoss;
-const buscarProductosEnMELI = (productoAbuscar) => {
-    console.log(productoAbuscar)
+const buscarProductosEnMELI = (productoAbuscar) => {  
     fetch(API_URL + endpointProductos + '?q=' + productoAbuscar)
         .then((response) => response.json())
         .then((data) => {
             productoss = data.results;
-
+            console.log(productoss)
             document.getElementById("producto").innerHTML = "";
             productoss.forEach((prod) => {
                 const div = document.createElement('div')
@@ -266,8 +266,10 @@ const buscarProductosEnMELI = (productoAbuscar) => {
             })
 
         })
+   
     filtros.classList.add("remove-f")
     categorias.classList.add("remove-f")
+    
 }
 
 
