@@ -1,28 +1,123 @@
-.saludo{
+.saludo {
     z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
-    @include flexible(flex, row, nowrap, center, center);   //mixin
-    height: 2.3rem;  
-    background-color:  map-get( $colores, secundario);    
+    @include flexible(flex, row, nowrap, center, center); //mixin
+    height: 2.3rem;
+    background-color: map-get($colores, secundario);
 
-    h3{
-        font-size: 1.3rem;        
-        color: map-get( $colores, blanco);  
+    h3 {
+        font-size: 1.3rem;
+        color: map-get($colores, blanco);
     }
 }
-.header__inicio{
+
+.header__inicio {
     z-index: 1;
     position: fixed;
     top: 2.2rem;
     width: 100%;
-    @include flexible(flex, row, nowrap, center, center);   //mixin
-    padding: 1rem 0 ;
-    background-color:  map-get( $colores, primario);
-    h1{
+    @include flexible(flex, row, nowrap, center, center); //mixin
+    padding: 1rem 0;
+    background-color: map-get($colores, primario);
+
+    h1 {
         font-size: 3rem;
         font-weight: 600;
     }
- }
- 
+}
+
+//  --------------CATALOGO---------------------------
+.filtros {
+    background-color: map-get($colores, blanco );
+    width: 100%;
+    position: fixed;
+    top: 5.4rem;
+    z-index: 1;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid;
+    @include flexible(flex, row, wrap, space-around, center);
+    gap: 1rem;
+
+    &__category {
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .category__select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 10px;
+            background-color: map-get($colores, blanco);
+            border: none;
+            background-color: map-get($colores, primario);
+        }
+    }
+
+    &__checkbox {
+        h3 {
+            margin-bottom: 0.3rem;
+            text-align: center;
+            transform: translate(-8px);
+            font-weight: 600;
+        }
+
+        label {
+            margin-right: 1rem;
+
+            input {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    &__busqueda {
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 0.1rem 0;
+        }
+
+        .input-buscar {
+            padding: 0.5rem 0.2rem;
+        }
+
+        .btn-buscar {
+            border: 1px solid #ffcaa6;
+            padding: 0.5rem;
+            border-radius: 5px;
+            background-color: #ffcaa6;
+            animation: all 0.3s ease-in-out;
+        }
+
+        .btn-buscar:hover {
+            transform: translatex(-1px), ;
+            transform: translatey(1px);
+        }
+    }
+
+    &__carrito {
+        .carrito__icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .carrito__icon i {
+            margin-top: .6rem;
+            font-size: 2.5rem;
+            color: map-get($colores, rojo);
+        }
+
+        .carrito__icon span {
+            position: absolute;
+            top: -.2rem;
+            color: map-get($colores, rojo);
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+        }
+    }
+}
