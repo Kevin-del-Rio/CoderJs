@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;   
+}
+h1 , h2 , h3 , h4 , h5 , h6 , p ,span , a , strong , blockquote , i , b , u , em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color:inherit;
+  }
+
+@mixin flexible($dis, $direction, $corte, $justify, $aling) {
+    display: $dis;
+    flex-flow: $direction $corte;
+    justify-content: $justify;
+    align-items: $aling;
+}
+$colores:(
+    'primario': #ffcaa6,
+    'secundario': #444444, 
+    'fondo': #fcf7e8,   
+    'rojo':#e71247,
+    'precio' : #0751a6,
+    'blanco': #f3f3f3,
+    'btn-1': #ee7979, 
+    'btn-2': #f47915,
+    'bordes': #98c5ff,
+);
+
+body{
+    min-height: 100vh;
+    background-color: map-get($colores, fondo );
+}
+.container{ 
+    width: 90%;
+    left:  50%;
+    transform: translate(-50%);
+    min-height: 81vh;
+    border: 1px solid;       
+    position: relative;
+    top: 7.5rem;      
+}

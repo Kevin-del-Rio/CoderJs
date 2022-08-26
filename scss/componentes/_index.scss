@@ -1,0 +1,49 @@
+.main{
+    @include flexible(flex, row, wrap, space-around, center);
+    background-color: map-get($colores, fondo );
+
+    &__texto {  
+        height: 50%;
+        width: 35%;
+        @include flexible(flex, column, nowrap, start, start);}
+
+    &__img {
+        width: 30vw;
+        .img {            
+            border-radius: 20%;
+        }
+    }
+
+}
+.texto {
+    &__uno {
+        font-size: 2.5rem;
+    }
+    &__dos {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    &__btn {
+        width: 250px;
+        height: 80px;
+        margin-top: 1.5rem;
+        padding: 1rem ;
+        font-size: 1.5rem;
+        border: none;
+        border-bottom: 2px solid map-get($colores, bordes);
+        border-right: 2px solid map-get($colores, bordes);
+        border-radius: 10px;
+        background-color: map-get($colores, primario);
+        transition: all .2s ease-in-out;
+
+        &:hover {         
+            background-color:map-get($colores, btn-2);
+            font-size: 2.2rem;
+            padding: 1rem .2rem;            
+        }
+
+    }
+}
+
+
+

@@ -1,0 +1,38 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    top: 8rem;
+
+    &__pie {
+        width: 100%;
+        @include flexible(flex, row, nowrap, space-between, center);      
+        padding: 1rem 3rem;
+        background-color: map-get($colores, secundario);
+    }
+}
+
+.pie {
+    color: map-get($colores, blanco);
+    &__logo a {        
+        font-size: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    &__legal {
+        width: 100%;
+        text-align: left;
+        padding-left: 3rem;      
+    }
+
+    &__redes {
+        width: 200px;
+        @include flexible(flex, row, wrap, space-around, center);        
+        font-size: 35px;
+        margin-left: 3px;
+    
+    }
+}
+
+
+

@@ -1,0 +1,28 @@
+.saludo{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @include flexible(flex, row, nowrap, center, center);   //mixin
+    height: 2.3rem;  
+    background-color:  map-get( $colores, secundario);    
+
+    h3{
+        font-size: 1.3rem;        
+        color: map-get( $colores, blanco);  
+    }
+}
+.header__inicio{
+    z-index: 1;
+    position: fixed;
+    top: 2.2rem;
+    width: 100%;
+    @include flexible(flex, row, nowrap, center, center);   //mixin
+    padding: 1rem 0 ;
+    background-color:  map-get( $colores, primario);
+    h1{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+ }
+ 
