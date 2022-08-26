@@ -34,6 +34,7 @@ body {
   z-index: 2; }
 
 .carrito {
+  min-height: 50vh;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -71,7 +72,8 @@ body {
     opacity: 1;
     visibility: visible; }
   .carrito__center {
-    margin: 6rem 0 3rem 0; }
+    margin: 6rem 0 3rem 0;
+    min-height: 50%; }
     .carrito__center .carrito__item {
       display: grid;
       align-items: center;
@@ -360,7 +362,7 @@ body {
     /*Hover*/ }
     .productos .productos__center .card {
       width: 190px;
-      height: 320px;
+      height: 350px;
       padding: .8rem;
       background: #f5f5f5;
       position: relative;
@@ -389,9 +391,10 @@ body {
     .productos .productos__center .card__footer {
       width: 100%;
       display: flex;
+      flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
-      padding-top: 10px;
+      padding: 10px 0;
       border-top: 1px solid #ddd; }
     .productos .productos__center .text__title {
       font-weight: 900;
