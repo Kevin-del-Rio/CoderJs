@@ -252,6 +252,10 @@ body {
   .filtros__busqueda .btn-buscar:hover {
     transform: translatex(-1px);
     transform: translatey(1px); }
+  .filtros__busqueda .atras {
+    opacity: 0%; }
+  .filtros__busqueda .atras-ver {
+    opacity: 100%; }
   .filtros__carrito .carrito__icon {
     position: relative;
     cursor: pointer; }
